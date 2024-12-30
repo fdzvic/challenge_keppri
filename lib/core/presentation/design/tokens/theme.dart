@@ -8,19 +8,5 @@ class CustomTheme {
     primaryColor: colors.primaryColor,
     scaffoldBackgroundColor: colors.backgroundColor,
     appBarTheme: AppBarTheme(color: colors.primaryColor),
-    textTheme: TextTheme(
-      bodyLarge: TextStyle(
-        color: colors.textColor,
-        fontSize: 20,
-      ),
-      bodyMedium: TextStyle(
-        color: colors.textColor,
-        fontSize: 16,
-      ),
-      bodySmall: TextStyle(
-        color: colors.textColor,
-        fontSize: 12,
-      ),
-    ),
   );
 }

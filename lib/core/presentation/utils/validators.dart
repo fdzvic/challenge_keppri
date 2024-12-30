@@ -19,6 +19,16 @@ String? validateText(String input) {
   }
 }
 
+String? validateParagraph(String input) {
+  if (input.isEmpty) {
+    return 'Este campo es obligatorio';
+  } else if (input.length < 10) {
+    return 'El texto debe tener al menos 10 caracteres';
+  } else {
+    return null;
+  }
+}
+
 String? validateName(String? input) {
   if ((input ?? "").isEmpty) {
     return 'Este campo es obligatorio';

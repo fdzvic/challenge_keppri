@@ -1,8 +1,19 @@
 class FirstFormState {
+  final bool? enabledButton;
+  final bool? firstValidation;
 
-  FirstFormState();
+  FirstFormState({
+    this.enabledButton = false,
+    this.firstValidation = false,
+  });
 
-  FirstFormState copyWith() {
-    return FirstFormState();
+  FirstFormState copyWith({
+    bool? enabledButton,
+    bool? firstValidation,
+  }) {
+    return FirstFormState(
+      enabledButton: enabledButton ?? this.enabledButton,
+      firstValidation: firstValidation ?? this.firstValidation,
+    );
   }
 }

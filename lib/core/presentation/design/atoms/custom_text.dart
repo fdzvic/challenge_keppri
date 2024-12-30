@@ -1,3 +1,5 @@
+import 'package:challenge_keppri/core/presentation/design/tokens/colors.dart';
+import 'package:challenge_keppri/core/presentation/design/tokens/styles.dart';
 import 'package:flutter/material.dart';
 
 enum TextStyleType {
@@ -17,6 +19,7 @@ class CustomText extends StatelessWidget {
   final TextOverflow? overflow;
   final double? height;
   final TextStyleType? styleType;
+  final bool? seeAsteric;
 
   const CustomText(
     this.text, {
@@ -26,46 +29,42 @@ class CustomText extends StatelessWidget {
     this.textDecoration,
     this.maxLines,
     this.textAlign,
-    this.fontSize,
+    this.fontSize = 16,
     this.overflow,
     this.height = 1,
     this.styleType = TextStyleType.bodyMedium,
+    this.seeAsteric = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text ?? '',
-      textAlign: textAlign,
+    return RichText(
+      textAlign: textAlign ?? TextAlign.start,
       maxLines: maxLines ?? 100,
-      overflow: overflow,
-      style:
-          _getTextStyle(context), // Llama a la función para obtener el estilo
+      overflow: overflow ?? TextOverflow.ellipsis,
+
+      // Llama a la función para obtener el estilo
+      text: TextSpan(
+          style: styles.textStyle(
+            fontWeight: fontWeight,
+            fontSize: fontSize,
+            textColor: textColor,
+            textDecoration: textDecoration,
+            height: height,
+          ),
+          children: [
+            TextSpan(text: text),
+            if (seeAsteric!)
+              TextSpan(
+                text: '*',
+                style: styles.textStyle(
+                  fontWeight: fontWeight,
+                  fontSize: fontSize,
+                  textColor: colors.pinkColor,
+                  height: height,
+                ),
+              )
+          ]),
     );
-  }
-
-  TextStyle _getTextStyle(BuildContext context) {
-    TextStyle baseStyle = _getBaseStyle(context);
-
-    return baseStyle.copyWith(
-      fontWeight: fontWeight ?? baseStyle.fontWeight,
-      fontSize: fontSize ?? baseStyle.fontSize,
-      color: textColor ?? baseStyle.color,
-      decoration: textDecoration ?? baseStyle.decoration,
-      height: height ?? baseStyle.height,
-    );
-  }
-
-  TextStyle _getBaseStyle(BuildContext context) {
-    switch (styleType) {
-      case TextStyleType.bodyLarge:
-        return Theme.of(context).textTheme.bodyLarge!;
-      case TextStyleType.bodyMedium:
-        return Theme.of(context).textTheme.bodyMedium!;
-      case TextStyleType.bodySmall:
-        return Theme.of(context).textTheme.bodySmall!;
-      default:
-        return Theme.of(context).textTheme.bodyMedium!;
-    }
   }
 }

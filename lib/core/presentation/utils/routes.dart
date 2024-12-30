@@ -8,7 +8,7 @@ class Routes {
   static const String secondForm = '/second-form';
 }
 
-final router = GoRouter(initialLocation: Routes.firstForm, routes: [
+final router = GoRouter(initialLocation: Routes.secondForm, routes: [
   GoRoute(
       path: Routes.firstForm,
       pageBuilder: (context, state) =>

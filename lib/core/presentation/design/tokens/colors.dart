@@ -9,7 +9,8 @@ class CustomColors {
   final Color cardColor = const Color(0xFFFFFFFF);
   final Color primaryButtonColor = const Color(0xFFEDC603);
   final Color disabledPrimaryButtonColor = const Color(0xFF585853);
-  final Color buttonSelectedColor = const Color(0xFF343642);
+  final Color buttonSelectedColor = const Color(0xFF141728);
+  final Color borderButtonColor = const Color(0xFF343642);
   final Color borderColor = const Color(0xFF038BED);
   final Color pinkColor = const Color(0xFFFF19A3);
 }

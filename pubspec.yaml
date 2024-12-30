@@ -23,3 +23,13 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: Futura
+      fonts:
+        - asset: assets/fonts/Futura-Bk-BT.ttf
+         
+
