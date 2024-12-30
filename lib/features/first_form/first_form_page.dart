@@ -12,6 +12,7 @@ class FirstFormPage extends ConsumerWidget {
     var controller = ref.watch(firstFormController.notifier);
     var state = ref.watch(firstFormController);
     return Scaffold(
+      appBar: AppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
