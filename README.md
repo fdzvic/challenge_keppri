@@ -20,7 +20,7 @@ Sigue estos pasos para descargar y correr el proyecto:
 1. **Clona el repositorio:**
 
    ```bash
-   git clone <https://github.com/fdzvic/challenge_keppri>
+   git clone https://github.com/fdzvic/challenge_keppri
 
 2. **Accede al directorio del proyecto:**
 
