@@ -2,6 +2,7 @@ import 'package:challenge_keppri/core/presentation/design/atoms/custom_text.dart
 import 'package:challenge_keppri/core/presentation/design/molecules/custom_app_bar.dart';
 import 'package:challenge_keppri/core/presentation/design/molecules/custom_toggle_buttons.dart';
 import 'package:challenge_keppri/core/presentation/design/atoms/primary_button.dart';
+import 'package:challenge_keppri/core/presentation/utils/custom_dialogs.dart';
 import 'package:challenge_keppri/core/presentation/utils/routes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
@@ -67,7 +68,11 @@ class _SecondFormState extends ConsumerState<SecondFormPage> {
                   PrimaryButton(
                     text: "Siguiente",
                     enabled: true,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.showMessageDialog(
+                          title: "Registro exitoso",
+                          subtitle: "Se registró la información con éxito.");
+                    },
                   )
                 ],
               ),

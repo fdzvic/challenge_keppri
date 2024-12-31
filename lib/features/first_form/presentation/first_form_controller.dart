@@ -14,6 +14,7 @@ class FirstFormController extends StateNotifier<FirstFormState> {
 }
 
 final firstFormController =
-    StateNotifierProvider<FirstFormController, FirstFormState>((ref) {
+    StateNotifierProvider.autoDispose<FirstFormController, FirstFormState>(
+        (ref) {
   return FirstFormController();
 });

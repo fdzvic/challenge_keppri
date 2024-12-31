@@ -3,8 +3,8 @@ import 'package:challenge_keppri/core/presentation/design/molecules/custom_app_b
 import 'package:challenge_keppri/core/presentation/design/molecules/custom_text_form_field.dart';
 import 'package:challenge_keppri/core/presentation/design/atoms/primary_button.dart';
 import 'package:challenge_keppri/core/presentation/utils/routes.dart';
-import 'package:challenge_keppri/features/first_form/first_form_controller.dart';
-import 'package:challenge_keppri/features/first_form/first_form_state.dart';
+import 'package:challenge_keppri/features/first_form/presentation/first_form_controller.dart';
+import 'package:challenge_keppri/features/first_form/presentation/first_form_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

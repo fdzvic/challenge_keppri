@@ -1,5 +1,5 @@
-import 'package:challenge_keppri/features/first_form/first_form_page.dart';
-import 'package:challenge_keppri/features/second_form/second_form_page.dart';
+import 'package:challenge_keppri/features/first_form/presentation/first_form_page.dart';
+import 'package:challenge_keppri/features/second_form/presentation/second_form_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -8,7 +8,7 @@ class Routes {
   static const String secondForm = '/second-form';
 }
 
-final router = GoRouter(initialLocation: Routes.secondForm, routes: [
+final router = GoRouter(initialLocation: Routes.firstForm, routes: [
   GoRoute(
       path: Routes.firstForm,
       pageBuilder: (context, state) =>
